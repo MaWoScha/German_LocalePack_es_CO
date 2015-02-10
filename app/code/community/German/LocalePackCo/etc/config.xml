@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @category  German
+ * @package   German_LocalePack
+ * @authors   MaWoScha <mawoscha@siempro.co, http://www.siempro.co/>
+ * @developer MaWoScha <mawoscha@siempro.co, http://www.siempro.co/>
+ * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <German_LocalePackCo>
+            <version>0.1.0</version>
+            <locale>es_CO</locale>
+            <title>Spanish (Colombia) Language Pack</title>
+            <link_git>https://github.com/MaWoScha/German_LocalePack_es_CO</link_git>
+            <link_mage></link_mage>
+        </German_LocalePackCo>
+    </modules>
+
+    <global>
+        <models>
+            <localepackco>
+                <class>German_LocalePackCo_Model</class>
+            </localepackco>
+        </models>
+        <helpers>
+            <localepackco>
+                <class>German_LocalePackCo_Helper</class>
+            </localepackco>
+        </helpers>
+        <blocks>
+            <localepackco>
+                <class>German_LocalePackCo_Block</class>
+            </localepackco>
+        </blocks>
+        <events>
+            <adminhtml_controller_action_predispatch_start>
+                <observers>
+                    <localepackco>
+                        <class>localepackco/observer</class>
+                        <method>adminhtmlControllerActionPredispatchStart</method>
+                    </localepackco>
+                </observers>
+            </adminhtml_controller_action_predispatch_start>
+        </events>
+    </global>
+	
+    <default>
+        <localepackco>
+             <notification>
+                <url>https://github.com/MaWoScha/German_LocalePack_es_CO</url>
+            </notification>
+        </localepackco>
+        <magesetup>
+            <default_country>CO</default_country>
+        </magesetup>
+    </default>
+
+    <adminhtml>
+        <layout>
+            <updates>
+                <localepackco>
+                    <files>
+                    	<default>localepackco.xml</default>
+                    </files>
+                </localepackco>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <German_LocalePackCo>
+                    <files>
+                        <localepackco>German_LocaleCo.csv</localepackco>
+                        <default>German_LocaleEs.csv</default>
+                    </files>
+                </German_LocalePackCo>
+            </modules>
+        </translate>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children> <!--
+                                        <localepacks translate="title" module="localepackco">
+                                            <title>Language Packs</title>
+                                    		<children> -->
+                                        		<localepackco translate="title" module="localepackco">
+                                            		<title>Spanish (Colombia) Language Pack</title>
+                                        		</localepackco> <!--
+                                    		</children>
+                                        </localepacks> -->
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+
+</config>
