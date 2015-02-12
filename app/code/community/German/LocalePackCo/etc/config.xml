@@ -11,7 +11,7 @@
 <config>
     <modules>
         <German_LocalePackCo>
-            <version>0.2.0</version>
+            <version>0.3.0</version>
             <locale>es_CO</locale>
             <title>Spanish (Colombia) Language Pack</title>
             <link_git>https://github.com/MaWoScha/German_LocalePack_es_CO</link_git>

@@ -13,7 +13,7 @@ Spanish language pack for Magento Commerce - Version for Colombia
 Spanisches Sprachpaket für Magento Commerce - Sprachversion für Kolumbien</description>
    <license>OSL</license>
    <license_uri>http://opensource.org/licenses/osl-3.0.php</license_uri>
-   <version>0.2.0</version>
+   <version>0.3.0</version>
    <stability>stable</stability>
    <notes>Compatible with Magento 1.6.x-1.9.2.x</notes>
    <authors>
